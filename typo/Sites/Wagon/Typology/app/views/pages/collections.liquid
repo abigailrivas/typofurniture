@@ -1,0 +1,114 @@
+---
+title: Collections
+listed: true
+published: true
+
+is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+
+# Control the display of the page in the back-office.
+# display_settings:
+#   hidden: true          # hidden for authors?
+
+# Content of the list of sections if the {% sections_dropzone %} liquid tag is present in the page.
+# sections_dropzone_content: >
+#   []
+#
+
+# Content of sections outside the dropzone
+# sections_content: >
+#   {}
+#
+
+---
+
+{{ 'collections.css' | stylesheet_tag }}
+{{ 'varbase.css' | stylesheet_tag }}
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link
+  rel="shortcut icon"
+  href="/images/favicon/favicon.ico"
+  type="image/x-icon">
+
+
+
+{% section fixed_header %}
+
+{% block main %}
+
+  <div class="shop__title">
+    <h1>All</h1>
+  </div>
+
+  <!-- =========== SEARCH AND PRODUCT COUNTER =========  -->
+  <div class="search-counter">
+    <div class="search-counter__counter">
+      <span>13 products</span>
+    </div>
+    <div class="search-counter__search">
+      <form
+        class="form-search"
+        action="search"
+        method="get"
+        role="search">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search">
+        <button type="submit">
+          <img src="/images/icons/buscar.png" alt="">
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="collections">
+    <div class="collect-filter__container">
+      <div class="collect-filter__filter">
+        <div class="collect-filter__title">
+          <p>Filters</p>
+        </div>
+        <ul class="collect-filter__list">
+          <li class="collect-filter" data-value="furnitures">Furniture</li>
+          <li class="collect-filter" data-value="lamps">Lamps</li>
+          <li class="collect-filter" data-value="ceramics">Ceramics</li>
+          <li class="collect-filter" data-value="iron">Iron</li>
+          <li class="collect-filter" data-value="wood">Wood</li>
+        </ul>
+      </div>
+      <div class="collect-filter__sort-by">
+        <div class="collect-filter__title">
+          <p>Sort By</p>
+        </div>
+        <ul class="collect-filter__list">
+          <li class="collect-filter" data-value="?sort_by=price-ascending">Price: low to high</li>
+          <li class="collect-filter" data-value="?sort_by=price-descending">Price: high to low</li>
+          <li class="collect-filter" data-value="?sort_by=title-ascending">A-Z</li>
+          <li class="collect-filter" data-value="?sort_by=title-descending">Z-A</li>
+        </ul>
+      </div>
+    </div>
+
+    {% section products %}
+  </div>
+
+{% endblock %}
+
+{% section footer %}

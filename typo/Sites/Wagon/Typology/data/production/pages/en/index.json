@@ -1,0 +1,17 @@
+{
+  "id":"63d46f3d59cc9d007db80249",
+  "title":"Home page",
+  "slug":"index",
+  "handle":null,
+  "listed":true,
+  "published":true,
+  "position":0,
+  "fullpath":"index",
+  "sections_content":{},
+  "sections_dropzone_content":[],
+  "editable_elements":{},
+  "seo_title":null,
+  "meta_description":null,
+  "meta_keywords":null,
+  "raw_template":"<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>{{ page.title }}</title>\n    {{ 'varbase.css' | stylesheet_tag }}\n    {{ 'index.css' | stylesheet_tag }}\n    {{ 'base.js' | javascript_tag }}\n  </head>\n  <body>\n    {% section header %}\n    \n    {% block 'main' %}\n\n      {% include cookies %}\n\n      {% section 'hero' %}\n\n      {% section 'about_us' %}\n\n      {% section 'featured_products' %}\n\n      {% section 'product_suggestion' %}\n\n      {% include newsl %}\n    \n    {% endblock %}\n\n  </body>\n\n  {% section footer %}\n</html>"
+}

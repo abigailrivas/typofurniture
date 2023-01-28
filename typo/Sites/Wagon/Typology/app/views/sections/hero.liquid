@@ -1,0 +1,57 @@
+---
+name: Hero
+icon: image_text
+
+settings:
+- label: "Title"
+  id: title
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "Subtitle"
+  id: subtitle
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "Background image"
+  id: background_image
+  type: image_picker
+  
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: []
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# Presets can be seen as different versions of a same section.
+# Useless if the section is not aimed to be used along with section_dropzone liquid tag
+presets:
+  - name: "Hero"
+    category: "Category"
+    settings:
+      title: "Unde neque aut minus."
+      background_image: "/samples/images/default.svg"
+    blocks: []
+
+
+---
+
+<section
+  id="{{ section.anchor_id }}"
+  class="hero"
+  {{ section.locomotive_attributes }}>
+  <h1>
+    Seamless furniture with natural fabrics</h1>
+  <a href="collections.liquid" class="btn btn--secondary">Shop All</a>
+
+  <video
+    src="/images/videos/bg_hero_home.mp4"
+    class="hero__video"
+    autoplay
+    muted
+    loop></video>
+</section>

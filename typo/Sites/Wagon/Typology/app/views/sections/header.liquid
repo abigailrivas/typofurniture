@@ -1,0 +1,150 @@
+---
+# Name of the section displayed in the editor UI
+# (only if keep_name is set to true)
+name: Header
+
+# By default, the first text type setting will be used as
+# the name of the section in the editor UI.
+# To keep the name of the section instead, uncomment the following line.
+# keep_name: true
+
+# Icon of the section in the editor UI
+# Values: header, default, slide, text, image_text, list, footer
+icon: header
+
+# By default, the first image_picker type setting will be used
+# as the icon of the section in the editor UI.
+# To keep the icon of the section instead, uncomment the following line.
+# keep_icon: true
+
+# Definition of the settings:
+# A setting type can be one of the following values: text, image_picker, checkbox, radio, select, url, hint, content_type.
+# Please visit: https://doc.locomotivecms.com/docs/json-definition for more explanation.
+settings:
+- label: "My awesome title"
+  id: title
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "An image"
+  id: image
+  type: image_picker
+  
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: 
+- name: "List item"
+  type: list_item
+  settings:
+  - label: "Item title"
+    id: title
+    type: text
+    # html: true
+    # line_break: true
+    default: "Cumque delectus esse ex."
+  - label: "Item image"
+    id: image
+    type: image_picker
+    default: "/samples/images/default.svg"
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# Presets can be seen as different versions of a same section.
+# Useless if the section is not aimed to be used along with section_dropzone liquid tag
+presets:
+  - name: "Header"
+    category: "Category"
+    settings:
+      title: "Tempore provident repellendus esse."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Quas et incidunt voluptatem."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Cupiditate quis est consequatur."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Nemo at odit est."
+        image: "/samples/images/default.svg"
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "header"
+settings:
+title: "Impedit quibusdam dolores esse."
+image: "/samples/images/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Quod perspiciatis omnis itaque."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Numquam nihil minus a."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Deserunt minima dignissimos ut."
+image: "/samples/images/default.svg"
+
+2. as stand-alone section
+
+{% section 'header' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+header:
+settings:
+title: "Ex eum odio et."
+image: "/samples/images/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Est animi tempora ad."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Sequi quo qui culpa."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Iure in est molestiae."
+image: "/samples/images/default.svg"
+
+{% endcomment %}<header class="header" id="header-home">
+  <a href="collections.liquid">Shop</a>
+  <a href="index.liquid">
+    <img
+      src="/images/logo_white.png"
+      alt="Typology logo"
+      class="header__logo">
+  </a>
+  <div class="bag">
+    <span class="bag__title">Bag</span>
+    <span class="bag__items">0</span>
+  </div>
+</header>

@@ -1,0 +1,151 @@
+---
+# Name of the section displayed in the editor UI
+# (only if keep_name is set to true)
+name: About us
+
+# By default, the first text type setting will be used as
+# the name of the section in the editor UI.
+# To keep the name of the section instead, uncomment the following line.
+# keep_name: true
+
+# Icon of the section in the editor UI
+# Values: header, default, slide, text, image_text, list, footer
+icon: slide
+
+# By default, the first image_picker type setting will be used
+# as the icon of the section in the editor UI.
+# To keep the icon of the section instead, uncomment the following line.
+# keep_icon: true
+
+# Definition of the settings:
+# A setting type can be one of the following values: text, image_picker, checkbox, radio, select, url, hint, content_type.
+# Please visit: https://doc.locomotivecms.com/docs/json-definition for more explanation.
+settings:
+- label: "My awesome title"
+  id: title
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "An image"
+  id: image
+  type: image_picker
+  
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: 
+- name: "List item"
+  type: list_item
+  settings:
+  - label: "Item title"
+    id: title
+    type: text
+    # html: true
+    # line_break: true
+    default: "Unde numquam quia cumque."
+  - label: "Item image"
+    id: image
+    type: image_picker
+    default: "/samples/images/default.svg"
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# Presets can be seen as different versions of a same section.
+# Useless if the section is not aimed to be used along with section_dropzone liquid tag
+presets:
+  - name: "About us"
+    category: "Category"
+    settings:
+      title: "Eveniet facere exercitationem deleniti."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Corrupti officia facilis voluptatem."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Labore commodi facilis a."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Qui eius occaecati quam."
+        image: "/samples/images/default.svg"
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "about_us"
+settings:
+title: "Aperiam cumque corrupti autem."
+image: "/samples/images/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Occaecati molestiae et sunt."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Accusamus quas dolores quia."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Occaecati maxime ex dicta."
+image: "/samples/images/default.svg"
+
+2. as stand-alone section
+
+{% section 'about_us' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+about_us:
+settings:
+title: "Omnis modi rem at."
+image: "/samples/images/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Quo tenetur natus rem."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Non necessitatibus omnis tempora."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Fuga soluta nobis qui."
+image: "/samples/images/default.svg"
+
+{% endcomment %}<section class="about-us">
+  <h2 class="about-us__title">Creating perfect lines and imposing presence</h2>
+  <p class="about-us__description">Developed the concept of exclusivity, a Typology features timeless furniture, with natural fabrics, curved lines, plenty of mirrors and classic design, which can be incorporated into any decor project. The pieces enchant for their sobriety, to last for generations, faithful to the shapes of each period, with a touch of the present.</p>
+  <a href="404.liquid" class="about-us__btn btn btn--third">Read about us</a>
+
+  <div class="about-us__bg-images">
+    <img src="/images/products/atajux_lamp.PNG" alt>
+    <img src="/images/products/aramado_lamp.PNG" alt=>
+    <img src="/images/products/funyl_lamp.PNG" alt>
+    <img src="/images/products/laqcua_candleholder.PNG" alt>
+    <img src="/images/products/scene_5.PNG" alt>
+    <img src="/images/products/nobrega_lamp.PNG" alt>
+  </div>
+</section>

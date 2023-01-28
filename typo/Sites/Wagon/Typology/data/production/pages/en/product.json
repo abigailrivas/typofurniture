@@ -1,0 +1,17 @@
+{
+  "id":"63d540335d956a007deabc8a",
+  "title":"Product",
+  "slug":"product",
+  "handle":null,
+  "listed":true,
+  "published":true,
+  "position":99,
+  "fullpath":"product",
+  "sections_content":{},
+  "sections_dropzone_content":[],
+  "editable_elements":{},
+  "seo_title":null,
+  "meta_description":null,
+  "meta_keywords":null,
+  "raw_template":"<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\">\n\n{{ 'product.css' | stylesheet_tag }}\n{{ 'varbase.css' | stylesheet_tag }}\n\n{% section fixed_header %}\n\n{% block main %}\n\n  {% section product_info %}\n\n  {% include newsl %}\n\n{% endblock %}\n\n{% section footer %}\n\n{{ 'base.js' | javascript_tag }}"
+}

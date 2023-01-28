@@ -1,0 +1,17 @@
+{
+  "id":"63d46f3d59cc9d007db8024a",
+  "title":"Page not found",
+  "slug":"404",
+  "handle":null,
+  "listed":true,
+  "published":true,
+  "position":1,
+  "fullpath":"404",
+  "sections_content":{},
+  "sections_dropzone_content":[],
+  "editable_elements":{},
+  "seo_title":null,
+  "meta_description":null,
+  "meta_keywords":null,
+  "raw_template":"{% extends 'layouts/default' %}\n\n{% block 'main' %}\n\n  <p>Page not found</p>\n\n{% endblock %}"
+}

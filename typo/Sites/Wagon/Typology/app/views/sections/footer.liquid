@@ -1,0 +1,178 @@
+---
+# Name of the section displayed in the editor UI
+# (only if keep_name is set to true)
+name: Footer
+
+# By default, the first text type setting will be used as
+# the name of the section in the editor UI.
+# To keep the name of the section instead, uncomment the following line.
+# keep_name: true
+
+# Icon of the section in the editor UI
+# Values: header, default, slide, text, image_text, list, footer
+icon: footer
+
+# By default, the first image_picker type setting will be used
+# as the icon of the section in the editor UI.
+# To keep the icon of the section instead, uncomment the following line.
+# keep_icon: true
+
+# Definition of the settings:
+# A setting type can be one of the following values: text, image_picker, checkbox, radio, select, url, hint, content_type.
+# Please visit: https://doc.locomotivecms.com/docs/json-definition for more explanation.
+settings:
+- label: "My awesome title"
+  id: title
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "An image"
+  id: image
+  type: image_picker
+  
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: 
+- name: "List item"
+  type: list_item
+  settings:
+  - label: "Item title"
+    id: title
+    type: text
+    # html: true
+    # line_break: true
+    default: "Omnis amet ut autem."
+  - label: "Item image"
+    id: image
+    type: image_picker
+    default: "/samples/images/default.svg"
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# Presets can be seen as different versions of a same section.
+# Useless if the section is not aimed to be used along with section_dropzone liquid tag
+presets:
+  - name: "Footer"
+    category: "Category"
+    settings:
+      title: "Adipisci asperiores ut harum."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Nesciunt numquam doloribus et."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Et eveniet amet consectetur."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Officiis nobis praesentium saepe."
+        image: "/samples/images/default.svg"
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "footer"
+settings:
+title: "Doloremque quod mollitia fuga."
+image: "/samples/images/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Dolorem consectetur dolore enim."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Non quis voluptatem atque."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Dolores enim eaque impedit."
+image: "/samples/images/default.svg"
+
+2. as stand-alone section
+
+{% section 'footer' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+footer:
+settings:
+title: "Reprehenderit sed voluptas corporis."
+image: "/samples/images/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Nobis nesciunt quod deserunt."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Deleniti animi possimus numquam."
+image: "/samples/images/default.svg"
+- type: list_item
+settings:
+title: "Voluptatibus est aspernatur nesciunt."
+image: "/samples/images/default.svg"
+
+{% endcomment %}<footer>
+  <div class="footer__nav">
+    <div class="footer__nav-section">
+      <span>Store</span>
+      <ul>
+        <li><a href="index.liquid">Home</a></li>
+      </ul>
+    </div>
+    <div class="footer__nav-section">
+      <span>Shop</span>
+      <ul>
+        <li><a href="collections.liquid">All</a></li>
+        <li><a href="404.liquid">Featured</a></li>
+      </ul>
+    </div>
+    <div class="footer__nav-section">
+      <span>Collections</span>
+      <ul>
+        <li><a href="404.liquid">Furniture</a></li>
+        <li><a href="404.liquid">Ceramic</a></li>
+        <li><a href="404.liquid">Lamps</a></li>
+      </ul>
+    </div>
+    <div class="footer__nav-section">
+      <span>Help</span>
+      <ul>
+        <li><a href="404.liquid">Contact</a></li>
+        <li><a href="404.liquid">Login & Account</a></li>
+        <li><a href="404.liquid">Privacy Policy</a></li>
+        <li><a href="404.liquid">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <img
+    src="/images/logo_semi_white.png"
+    alt=""
+    class="footer__logo">
+  <div class="footer__copy">
+    <span>© Typology</span>
+  </div>
+</footer>

@@ -1,0 +1,18 @@
+# development:
+#   host: dev.example.com
+#   email: john@doe.net
+#   password: apassword
+#   # api_key: <your api key here>
+
+local:
+  host: localhost:3333
+  handle: spacial-hurricane-5511
+  email: charmidemg@gmail.com
+  api_key: c5bb9fbf1f1ba1ea83d75f28c009b0da7418746b
+
+production:
+  host: https://station.locomotive.works
+  handle: spacial-hurricane-5511
+  email: charmidemg@gmail.com
+  api_key: c5bb9fbf1f1ba1ea83d75f28c009b0da7418746b
+#   # ssl: true

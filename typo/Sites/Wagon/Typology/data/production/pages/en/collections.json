@@ -1,0 +1,17 @@
+{
+  "id":"63d4727268ea5d007deabde8",
+  "title":"Collections",
+  "slug":"collections",
+  "handle":null,
+  "listed":true,
+  "published":true,
+  "position":99,
+  "fullpath":"collections",
+  "sections_content":{},
+  "sections_dropzone_content":[],
+  "editable_elements":{},
+  "seo_title":null,
+  "meta_description":null,
+  "meta_keywords":null,
+  "raw_template":"{{ 'collections.css' | stylesheet_tag }}\n{{ 'varbase.css' | stylesheet_tag }}\n\n\n{% section fixed_header %}\n\n{% block main %}\n\n  <div class=\"shop__title\">\n    <h1>All</h1>\n  </div>\n\n  <!-- =========== SEARCH AND PRODUCT COUNTER =========  -->\n  <div class=\"search-counter\">\n    <div class=\"search-counter__counter\">\n      <span>13 products</span>\n    </div>\n    <div class=\"search-counter__search\">\n      <form\n        class=\"form-search\"\n        action=\"search\"\n        method=\"get\"\n        role=\"search\">\n        <input\n          type=\"search\"\n          name=\"search\"\n          id=\"search\"\n          placeholder=\"Search\">\n        <button type=\"submit\">\n          <img src=\"/images/icons/buscar.png\" alt=\"\">\n        </button>\n      </form>\n    </div>\n  </div>\n  <div class=\"collections\">\n    <div class=\"collect-filter__container\">\n      <div class=\"collect-filter__filter\">\n        <div class=\"collect-filter__title\">\n          <p>Filters</p>\n        </div>\n        <ul class=\"collect-filter__list\">\n          <li class=\"collect-filter\" data-value=\"furnitures\">Furniture</li>\n          <li class=\"collect-filter\" data-value=\"lamps\">Lamps</li>\n          <li class=\"collect-filter\" data-value=\"ceramics\">Ceramics</li>\n          <li class=\"collect-filter\" data-value=\"iron\">Iron</li>\n          <li class=\"collect-filter\" data-value=\"wood\">Wood</li>\n        </ul>\n      </div>\n      <div class=\"collect-filter__sort-by\">\n        <div class=\"collect-filter__title\">\n          <p>Sort By</p>\n        </div>\n        <ul class=\"collect-filter__list\">\n          <li class=\"collect-filter\" data-value=\"?sort_by=price-ascending\">Price: low to high</li>\n          <li class=\"collect-filter\" data-value=\"?sort_by=price-descending\">Price: high to low</li>\n          <li class=\"collect-filter\" data-value=\"?sort_by=title-ascending\">A-Z</li>\n          <li class=\"collect-filter\" data-value=\"?sort_by=title-descending\">Z-A</li>\n        </ul>\n      </div>\n    </div>\n\n    {% section products %}\n  </div>\n\n{% endblock %}\n\n{% section footer %}"
+}
